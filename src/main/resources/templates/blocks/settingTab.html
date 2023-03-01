@@ -1,0 +1,315 @@
+ <div th:fragment="html_settingTab" class="tab-pane fade h-100" id="settings-tab" role="tabpanel">
+     <div class="d-flex flex-column h-100">
+         <!-- Tab Header -->
+         <div class="tab-header d-flex align-items-center border-bottom">
+             <ul class="d-flex justify-content-between align-items-center list-unstyled w-100 mx-4 mb-0">
+                 <!-- Title -->
+                 <li>
+                     <h3 class="mb-0">Cài đặt</h3>
+                 </li>
+                 <!-- Title -->
+
+                 <!-- Buttons -->
+                 <li>
+                     <ul class="list-inline">
+                         <!-- Menu Button -->
+                         <li class="list-inline-item">
+                             <button type="button" class="navigation-toggle btn btn-secondary btn-icon d-xl-none">
+                                 <i class="ri-menu-line"></i>
+                             </button>
+                         </li>
+                         <!-- Menu Button -->
+                     </ul>
+                 </li>
+                 <!-- Buttons -->
+             </ul>
+         </div>
+         <!-- Tab Header -->
+
+         <!-- Search Input -->
+         <div class="m-2">
+         </div>
+         <!-- Search Input -->
+
+         <!-- Tab Content -->
+         <div class="hide-scrollbar h-100">
+             <div class="m-4 mt-0">
+                 <!-- Profile -->
+                 <div class="card mb-3">
+                     <div class="card-body">
+                         <div class="row align-items-center gx-4">
+                             <!-- Avatar -->
+                             <div class="col-auto">
+                                 <div class="avatar avatar-online">
+                                     <span class="avatar-label bg-soft-success text-success">JD</span>
+                                 </div>
+                             </div>
+                             <!-- Avatar -->
+
+                             <!-- Content -->
+                             <div class="col">
+                                 <h5 class="mb-1">fullname</h5>
+                                 <p class="text-muted mb-0">email</p>
+                             </div>
+                             <!-- Content -->
+
+                             <!-- Button -->
+                             <a href="/logout" class="btn btn-sm btn-icon btn-base">
+                                 <i class="ri-logout-box-line"></i>
+                             </a>
+                             <!-- Button -->
+                         </div>
+                     </div>
+                 </div>
+                 <!-- Profile -->
+
+                 <!-- Account -->
+                 <div class="mb-3">
+                     <!-- Title -->
+                     <div class="d-flex align-items-center mx-4 mb-3">
+                         <small class="text-muted me-auto">Tài khoản</small>
+                     </div>
+                     <!-- Title -->
+
+                     <!-- Accordion -->
+                     <div class="card">
+                         <div class="card-body">
+                             <div class="accordion accordion-flush" id="accordion-account-settings">
+                                 <div class="accordion-item">
+                                     <div class="accordion-header" id="account-heading-1">
+                                         <div class="accordion-button collapsed p-0 pb-4" role="button" data-bs-toggle="collapse" data-bs-target="#account-collapse-1" aria-expanded="false" aria-controls="account-collapse-1">
+                                             <div>
+                                                 <h5 class="mb-1">Cài đặt tài khoản</h5>
+                                                 <p class="text-muted mb-0">Cập nhật thông tin tài khoản</p>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div id="account-collapse-1" class="accordion-collapse collapse" aria-labelledby="account-heading-1">
+                                         <div class="accordion-body p-0 pb-4">
+                                             <!-- Name Input -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Họ tên" aria-label="Họ tên">
+                                                 </div>
+                                             </div>
+                                             <!-- Name Input -->
+
+                                             <!-- Email Input -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Email" aria-label="Email">
+                                                 </div>
+                                             </div>
+                                             <!-- Email Input -->
+
+                                             <!-- Phone Input -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Số điện thoại" aria-label="Số điện thoại">
+                                                 </div>
+                                             </div>
+                                             <!-- Phone Input -->
+
+                                             <!-- About Input -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <textarea class="form-control form-control-lg form-control-solid" placeholder="Mô tả" rows="3"></textarea>
+                                                 </div>
+                                             </div>
+                                             <!-- About Input -->
+
+                                             <!-- Button -->
+                                             <button class="btn btn-lg btn-primary w-100">Lưu</button>
+                                             <!-- Button -->
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="accordion-item">
+                                     <div class="accordion-header" id="account-heading-2">
+                                         <div class="accordion-button collapsed p-0 pt-4" role="button" data-bs-toggle="collapse" data-bs-target="#account-collapse-2" aria-expanded="false" aria-controls="account-collapse-2">
+                                             <div>
+                                                 <h5 class="mb-1">Liên kết tài khoản</h5>
+                                                 <p class="text-muted mb-0">Liên kết với các tài khoản khác</p>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div id="account-collapse-2" class="accordion-collapse collapse" aria-labelledby="account-heading-2">
+                                         <div class="accordion-body p-0 pt-4">
+                                             <!-- Google Input -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Google" aria-label="Google">
+                                                 </div>
+                                             </div>
+                                             <!-- Google Input -->
+
+                                             <!-- Twitter Input -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Instagram" aria-label="Instagram">
+                                                 </div>
+                                             </div>
+                                             <!-- Twitter Input -->
+
+                                             <!-- Facebook Input -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Facebook" aria-label="Facebook">
+                                                 </div>
+                                             </div>
+                                             <!-- Facebook Input -->
+
+                                             <!-- Button -->
+                                             <button class="btn btn-lg btn-primary w-100">Lưu</button>
+                                             <!-- Button -->
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- Accordion -->
+                 </div>
+                 <!-- Account -->
+
+                 <!-- Security -->
+                 <div class="mb-3">
+                     <!-- Title -->
+                     <div class="d-flex align-items-center mx-4 mb-3">
+                         <small class="text-muted me-auto">Bảo mật</small>
+                     </div>
+                     <!-- Title -->
+
+                     <!-- Accordion -->
+                     <div class="card">
+                         <div class="card-body">
+                             <div class="accordion accordion-flush" id="accordion-security-settings">
+                                 <div class="accordion-item">
+                                     <div class="accordion-header" id="security-heading-1">
+                                         <div class="accordion-button collapsed p-0 pb-4" role="button" data-bs-toggle="collapse" data-bs-target="#security-collapse-1" aria-expanded="false" aria-controls="security-collapse-1">
+                                             <div>
+                                                 <h5 class="mb-1">Mật khẩu</h5>
+                                                 <p class="text-muted mb-0">Quản lý mật khẩu của bạn</p>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div id="security-collapse-1" class="accordion-collapse collapse" aria-labelledby="security-heading-1">
+                                         <div class="accordion-body p-0 pb-4">
+                                             <!-- Current password -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <input type="password" class="form-control form-control-lg form-control-solid" placeholder="Mật khâu hiện tại" aria-label="Current password">
+                                                 </div>
+                                             </div>
+                                             <!-- Current password -->
+
+                                             <!-- New password -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <input type="password" class="form-control form-control-lg form-control-solid" placeholder="Mật khẩu mới" aria-label="New password">
+                                                 </div>
+                                             </div>
+                                             <!-- New password -->
+
+                                             <!-- Confirm password -->
+                                             <div class="mb-4">
+                                                 <div class="input-group">
+                                                     <input type="password" class="form-control form-control-lg form-control-solid" placeholder="Xác nhận mật khẩu" aria-label="Confirm password">
+                                                 </div>
+                                             </div>
+                                             <!-- Confirm password -->
+
+                                             <!-- Button -->
+                                             <button class="btn btn-lg btn-primary w-100">Lưu</button>
+                                             <!-- Button -->
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="accordion-item">
+                                     <div class="accordion-header">
+                                         <div class="row align-items-center mt-4">
+                                             <div class="col">
+                                                 <h5 class="mb-1">Bảo mật hai lớp</h5>
+                                                 <p class="text-muted mb-0">Tăng cường bảo mật bằng xác thực hai phương thức</p>
+                                             </div>
+                                             <div class="col-auto">
+                                                 <div class="form-check form-switch">
+                                                     <input class="form-check-input" type="checkbox" id="switch-authentication" checked>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- Accordion -->
+                 </div>
+                 <!-- Security -->
+
+                 <!-- Notifications -->
+                 <div class="mb-3">
+                     <!-- Title -->
+                     <div class="d-flex align-items-center mx-4 mb-3">
+                         <small class="text-muted me-auto">Thông báo</small>
+                     </div>
+                     <!-- Title -->
+
+                     <!-- Accordion -->
+                     <div class="card">
+                         <div class="card-body">
+                             <div class="accordion accordion-flush" id="accordion-notification-settings">
+                                 <div class="accordion-item">
+                                     <div class="accordion-header" id="notification-heading-1">
+                                         <div class="accordion-button collapsed p-0 pb-4" role="button" data-bs-toggle="collapse" data-bs-target="#notification-collapse-1" aria-expanded="false" aria-controls="notification-collapse-1">
+                                             <div>
+                                                 <h5 class="mb-1">Thông báo</h5>
+                                                 <p class="text-muted mb-0">Quản lý thông báo</p>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div id="notification-collapse-1" class="accordion-collapse collapse" aria-labelledby="notification-heading-1">
+                                         <div class="accordion-body p-0 pb-4">
+                                             <ul class="list-group list-group-flush">
+                                                 <li class="list-group-item p-0 pb-4">
+                                                     <div class="row align-items-center">
+                                                         <div class="col">
+                                                             <h5 class="mb-1">Âm thanh</h5>
+                                                             <p class="text-muted mb-0">Bật âm thanh khi có thông báo đến</p>
+                                                         </div>
+                                                         <div class="col-auto">
+                                                             <div class="form-check form-switch">
+                                                                 <input class="form-check-input" type="checkbox" id="switch-sound-notification">
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </li>
+                                                 <li class="list-group-item p-0 pt-4">
+                                                     <div class="row align-items-center">
+                                                         <div class="col">
+                                                             <h5 class="mb-1">Thông báo từ trình duyệt</h5>
+                                                             <p class="text-muted mb-0">Nhận thông báo mới nhất từ trình duyệt</p>
+                                                         </div>
+                                                         <div class="col-auto">
+                                                             <div class="form-check form-switch">
+                                                                 <input class="form-check-input" type="checkbox" id="switch-browser-notification" checked>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </li>
+                                             </ul>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- Accordion -->
+                 </div>
+                 <!-- Notifications -->
+
+             </div>
+         </div>
+         <!-- Tab Content -->
+     </div>
+ </div>

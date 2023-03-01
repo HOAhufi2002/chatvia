@@ -1,0 +1,290 @@
+<div th:fragment="html_notificationTab" class="tab-pane fade h-100" id="notifications-tab" role="tabpanel">
+    <div class="d-flex flex-column h-100">
+        <!-- Tab Header -->
+        <div class="tab-header d-flex align-items-center border-bottom">
+            <ul class="d-flex justify-content-between align-items-center list-unstyled w-100 mx-4 mb-0">
+                <!-- Title -->
+                <li>
+                    <h3 class="mb-0">Thôn báo</h3>
+                </li>
+                <!-- Title -->
+
+                <!-- Buttons -->
+                <li>
+                    <ul class="list-inline">
+                        <!-- Menu Button -->
+                        <li class="list-inline-item">
+                            <button type="button" class="navigation-toggle btn btn-secondary btn-icon d-xl-none">
+                                <i class="ri-menu-line"></i>
+                            </button>
+                        </li>
+                        <!-- Menu Button -->
+                    </ul>
+                </li>
+                <!-- Buttons -->
+            </ul>
+        </div>
+        <!-- Tab Header -->
+
+        <!-- Search Input -->
+        <div class="m-4">
+            <div class="input-group form-notify-search">
+                <input type="text" class="form-control form-control-lg form-control-solid" placeholder="Tìm kiếm thông báo" aria-label="Search notifications" aria-describedby="search-notification-button">
+                <button class="btn btn-secondary btn-lg" type="submit" id="search-notification-button">
+                    <i class="ri-search-line"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Search Input -->
+
+        <!-- Tab Content -->
+        <div class="hide-scrollbar h-100">
+            <div class="m-4 mt-0">
+                <!-- Today -->
+                <div class="notification-list">
+                    <!-- Title -->
+                    <div class="d-flex align-items-center mx-4 mb-3">
+                        <small class="text-muted me-auto">Mới</small>
+                        <a href="#" class="text-muted small">Xóa tất cả</a>
+                    </div>
+                    <!-- Title -->
+
+                    <!-- Card -->
+                    <div class="list-wrap">
+                        <div class='card mb-3' id='notify-{
+                                $value['id']}'>
+                                <div class='card-body'>
+                                    <div class='d-flex align-items-center'>
+                                        <!-- Avatar -->
+                                        <div class='avatar me-4'>
+                                            <span class='avatar-label bg-soft-success text-success'>LL</span>
+                                        </div>
+
+                                        <div class='flex-grow-1'>
+                                            <div class='d-flex align-items-center overflow-hidden'>
+                                                <h5 class='me-auto text-break mb-0'>Hệ thống</h5>
+                                                <span class='small text-muted text-nowrap ms-2'>04:45</span>
+                                            </div>
+
+                                            <div class='d-flex align-items-center'>
+                                                <div class='line-clamp me-auto'>
+                                                    Đã chấn nhận lời mời kết bạn.
+                                                </div>
+
+                                                <div class='dropdown ms-5'>
+                                                    <button class='btn btn-icon btn-base btn-sm' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                                                        <i class='ri-more-fill'></i>
+                                                    </button>
+                                                    <ul class='dropdown-menu'>
+                                                        <li><a class='dropdown-item' href='#'>Xóa</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='card-footer'>
+                                    <div class='row gx-4'>
+                                        <div class='col'>
+                                            <a href='#' class='btn btn-secondary btn-sm w-100'>Hủy</a>
+                                        </div>
+                                        <div class='col'>
+                                            <a onClick='accecptFriend()' class='btn btn-primary btn-sm w-100'>Chấp nhận</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                    </div>
+                    <!-- Today -->
+
+                    <!-- Yesterday -->
+                    <div class="notification-list">
+                        <!-- Title -->
+                        <div class="d-flex align-items-center mx-4 mb-3">
+                            <small class="text-muted me-auto">Trước đó</small>
+                            <a href="#" class="text-muted small">Xóa tất cả</a>
+                        </div>
+                        <!-- Title -->
+
+                        <!-- Card -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-4">
+                                        <span class="avatar-label bg-info text-white">DR</span>
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex align-items-center overflow-hidden mb-1">
+                                            <h5 class="mb-0 text-break me-auto">Deborah Redd</h5>
+                                            <p class="small text-muted text-nowrap ms-2 mb-0">6:25 PM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">Uploaded new photos.
+                                            </div>
+                                            <div class="dropdown ms-5">
+                                                <button class="btn btn-icon btn-base btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="ri-more-fill"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">See less often</a></li>
+                                                    <li><a class="dropdown-item" href="#">Hide</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+
+                        <!-- Card -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-4">
+                                        <span class="avatar-label bg-danger text-white">JS</span>
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex align-items-center overflow-hidden mb-1">
+                                            <h5 class="mb-0 text-break me-auto">Joe Stoner</h5>
+                                            <p class="small text-muted text-nowrap ms-2 mb-0">5:15 PM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">Updated profile picture.
+                                            </div>
+                                            <div class="dropdown ms-5">
+                                                <button class="btn btn-icon btn-base btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="ri-more-fill"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">See less often</a></li>
+                                                    <li><a class="dropdown-item" href="#">Hide</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+
+                        <!-- Card -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-4">
+                                        <span class="avatar-label bg-success text-white">DG</span>
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex align-items-center overflow-hidden mb-1">
+                                            <h5 class="mb-0 text-break me-auto">Donald Graves</h5>
+                                            <p class="small text-muted text-nowrap ms-2 mb-0">4:35 PM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">Sent you a private message.
+                                            </div>
+                                            <div class="dropdown ms-5">
+                                                <button class="btn btn-icon btn-base btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="ri-more-fill"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">See less often</a></li>
+                                                    <li><a class="dropdown-item" href="#">Hide</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+
+                        <!-- Card -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-4">
+                                        <span class="avatar-label bg-warning text-white fs-3">
+                                            <i class="ri-star-line"></i>
+                                        </span>
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex align-items-center overflow-hidden mb-1">
+                                            <h5 class="mb-0 text-break me-auto">Gift</h5>
+                                            <p class="small text-muted text-nowrap ms-2 mb-0">2:35 PM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">You got 5GB of free storage space.
+                                            </div>
+                                            <div class="dropdown ms-5">
+                                                <button class="btn btn-icon btn-base btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="ri-more-fill"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">See less often</a></li>
+                                                    <li><a class="dropdown-item" href="#">Hide</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+
+                        <!-- Card -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-4">
+                                        <span class="avatar-label fs-3">
+                                            <i class="ri-settings-4-line"></i>
+                                        </span>
+                                    </div>
+                                    <!-- Content -->
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex align-items-center overflow-hidden mb-1">
+                                            <h5 class="mb-0 text-break me-auto">System</h5>
+                                            <p class="small text-muted text-nowrap ms-2 mb-0">2:10 PM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">Please setup notification settings.
+                                            </div>
+                                            <div class="dropdown ms-5">
+                                                <button class="btn btn-icon btn-base btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="ri-more-fill"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">See less often</a></li>
+                                                    <li><a class="dropdown-item" href="#">Hide</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                    </div>
+                    <!-- Yesterday -->
+                </div>
+            </div>
+            <!-- Tab Content -->
+        </div>
+    </div>

@@ -1,0 +1,413 @@
+
+<div th:fragment="html_chatTab" class="tab-pane fade show active h-100" id="chats-tab" role="tabpanel">
+    <div class="d-flex flex-column h-100">
+        <!-- Tab Header -->
+        <div class="tab-header d-flex align-items-center border-bottom">
+            <ul class="d-flex justify-content-between align-items-center list-unstyled w-100 mx-4 mb-0">
+                <!-- Title -->
+                <li>
+                    <h3 class="mb-0">Trò chuyện</h3>
+                </li>
+                <!-- Title -->
+
+                <!-- Buttons -->
+                <li>
+                    <ul class="list-inline">
+                        <!-- Menu Button -->
+                        <li class="list-inline-item">
+                            <button type="button" class="navigation-toggle btn btn-secondary btn-icon d-xl-none">
+                                <i class="ri-menu-line"></i>
+                            </button>
+                        </li>
+                        <!-- Menu Button -->
+                    </ul>
+                </li>
+                <!-- Buttons -->
+            </ul>
+        </div>
+        <!-- Tab Header -->
+
+        <!-- Search Input -->
+        <div class="m-4">
+            <form class="input-group">
+                <input type="search" class="form-control form-control-lg form-control-solid" placeholder="Tìm kiếm cuộc trò chuyện" aria-label="Search user" aria-describedby="search-user-button">
+                <button class="btn btn-secondary btn-lg" type="submit" id="search-user-button"><i class="ri-search-line"></i></button>
+            </form>
+        </div>
+        <!-- Search Input -->
+
+        <!-- Segmented Control -->
+        <div class="text-center mb-3">
+            <ul class="nav nav-pills nav-segmented" id="pills-tab" role="tablist">
+                <!-- Direct Nav Item -->
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-direct-tab" data-bs-toggle="pill" href="#direct-tab" role="tab" aria-controls="pills-direct-tab" aria-selected="true">Bạn bè</a>
+                </li>
+                <!-- Direct Nav Item -->
+
+                <!-- Group Nav Item -->
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-group-tab" data-bs-toggle="pill" href="#groups-tab" role="tab" aria-controls="pills-group-tab" aria-selected="false">Nhóm</a>
+                </li>
+                <!-- Group Nav Item -->
+            </ul>
+        </div>
+        <!-- Segmented Control -->
+
+        <!-- Tab Content -->
+        <div class="hide-scrollbar h-100">
+            <div class="tab-content m-4 mt-1">
+                <!-- Direct Chats Tab -->
+                <div class="tab-pane fade show active" id="direct-tab" role="tabpanel">
+                    <ul class="list-unstyled js-contact-list mb-0" id='conversation-list'>
+                        <!-- Chat Link 1 -->
+                        <li class="card contact-item active mb-3">
+                            <a href="index.html" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar avatar-online me-4">
+                                        <span class="avatar-label bg-soft-primary text-primary">AM</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Ariel Martinez</h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">8:12 AM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">Yes, I want to participate in the
+                                                project.
+                                            </div>
+                                            <span class="badge rounded-pill bg-primary ms-2">2</span>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 1 -->
+
+                        <!-- Chat Link 2 -->
+                        <li class="card contact-item mb-3">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar avatar-away me-4">
+                                        <span class="avatar-label">CS</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Chris Solomon</h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">9:36 AM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">Okay, I'll try to help.</div>
+                                            <span class="badge rounded-pill bg-primary ms-2">2</span>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 2 -->
+
+                        <!-- Chat Link 3 -->
+                        <li class="card contact-item mb-3">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-4">
+                                        <span class="avatar-label bg-warning text-white">KS</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Kelly Smith</h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">10:46 AM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">This is my favorite pastime!</div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 3 -->
+
+                        <!-- Chat Link 4 -->
+                        <li class="card contact-item mb-3">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-4">
+                                        <span class="avatar-label bg-success text-white">DG</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Donald Graves
+                                            </h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">3:10 PM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">This is an interesting solution to
+                                                the problem.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 4 -->
+
+                        <!-- Chat Link 5 -->
+                        <li class="card contact-item mb-3">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar avatar-online me-4">
+                                        <span class="avatar-label bg-info text-white">DR</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Deborah Redd
+                                            </h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">5:42 PM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">See you soon.</div>
+                                            <span class="badge rounded-pill bg-primary ms-2">3</span>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 5 -->
+
+                        <!-- Chat Link 6 -->
+                        <li class="card contact-item mb-3">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar avatar-online me-4">
+                                        <span class="avatar-label bg-danger text-white">JS</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Joe Stoner</h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">15/03</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">Please send me the PSD files, I want to take a look.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 6 -->
+
+                        <!-- Chat Link 7 -->
+                        <li class="card contact-item mb-3">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-4">
+                                        <span class="avatar-label bg-primary text-white">MC</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Maurice Coleman
+                                            </h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">15/03</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">I have no idea how to complete the task correctly.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 7 -->
+
+                        <!-- Chat Link 8 -->
+                        <li class="card contact-item mb-3">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar avatar-online me-4">
+                                        <span class="avatar-label bg-soft-success text-success">KC</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Katherine Cassidy
+                                            </h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">14/03</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">I will gladly help you, do not worry.</div>
+                                            <span class="badge rounded-pill bg-primary ms-2">5</span>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 8 -->
+
+                        <!-- Chat Link 9 -->
+                        <li class="card contact-item">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar avatar-busy me-4">
+                                        <span class="avatar-label bg-soft-info text-info">JP</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Jerry Prater
+                                            </h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">14/03</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">There are a few bugs to fix, I can help with that.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 9 -->
+                    </ul>
+                </div>
+                <!-- Direct Chats Tab -->
+
+                <!-- Group Chats Tab -->
+                <div class="tab-pane fade" id="groups-tab" role="tabpanel">
+                    <ul class="list-unstyled js-contact-list mb-0" id="groups-tab-list">
+                        <!-- Chat Link 1 -->
+                        <li class="card contact-item mb-3">
+                            <a href="chat-group.html" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar avatar-online me-4">
+                                        <span class="avatar-label bg-soft-info text-info">JP</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Jerry Prater</h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">11:45 AM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">Hi, John, can you show a photo from the last meeting, I would like to have a look at all of you.</div>
+                                            <span class="badge rounded-pill bg-primary ms-2">5</span>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 1 -->
+
+                        <!-- Chat Link 2 -->
+                        <li class="card contact-item mb-3">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar avatar-online me-4">
+                                        <span class="avatar-label bg-soft-success text-success">KC</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Katherine Cassidy</h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">1:30 PM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">Here are the latest files from our project, I'm waiting for your positive feedback. Write me as soon as you are free.</div>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 2 -->
+
+                        <!-- Chat Link 3 -->
+                        <li class="card contact-item">
+                            <a href="#" class="contact-link"></a>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-4">
+                                        <span class="avatar-label bg-warning text-white">KS</span>
+                                    </div>
+                                    <!-- Avatar -->
+
+                                    <!-- Content -->
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <div class="d-flex align-items-center mb-1">
+                                            <h5 class="text-truncate mb-0 me-auto">Kelly Smith</h5>
+                                            <p class="small text-muted text-nowrap ms-4 mb-0">2:55 PM</p>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="line-clamp me-auto">The design of the apartment looks great, I will focus on this option.</div>
+                                            <span class="badge rounded-pill bg-primary ms-2">2</span>
+                                        </div>
+                                    </div>
+                                    <!-- Content -->
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Chat Link 3 -->
+                    </ul>
+                </div>
+                <!-- Group Chats Tab -->
+            </div>
+        </div>
+        <!-- Tab Content -->
+    </div>
+</div>
